@@ -1,4 +1,3 @@
-x=1
-while(x==1){
-    alert("non puoi entrare riprova");
+for(x=300; x> 0;x--){
+    alert("ti mancano "+x+" click per vedere la pagina");
 }
