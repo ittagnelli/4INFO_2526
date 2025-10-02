@@ -9,41 +9,36 @@ function modifica_stile() {
         paraGialli[j].style.color = "blue";
         paraGialli[j].style.backgroundColor = "yellow";
         paraGialli[j].style.fontSize = "40px";
-        paraGialli[j].textContent = paraGialli[j].toUpperCase();
+        paraGialli[j].textContent = paraGialli[j].textContent.toUpperCase();
 
       }
-    // let primo = document.getElementsByClassName("par1");
-    // let secondo= document.getElementsByClassName("part2");
-    // let terz = document.getElementsByClassName("part3");
-    // let quarz = document.getElementsByClassName("part4");
-    // let cinquo = document.getElementsByClassName("part7");
+    let primo = document.getElementById("par1");
+    primo.style.color="red";
+    let secondo= document.getElementById("part2");
+    secondo.style.backgroundColor="lightgreen";
+    let terz = document.getElementsById("part3");
+    terz.textContent= terz.textContent.toUpperCase();
+    terz.style.backgroundColor="lightblue"
+    let quarz = document.getElementsById("part4");
+    quarz.style.color="red";
+    let cinquo = document.getElementsById("part5");
+    cinquo.style.backgroundColor="lightgreen";
+    let sesto = document.getElementById("part6");
+    sesto.textContent=sesto.textContent.toUpperCase();
+    let setto = document.getElementById("part7");
+    setto.style.fontFamily="italic";
+    let etto = document.getElementById("part8");
+    etto.style.backgroundColor="lightgreen";
     
 
-    // for (let a = 0; a < primo.length; a++) {
-    //     primo[a].style.color = "blue";
-    // }
-
-    // for (let c = 0; c < secondo.length; c++) {
-    //     secondo[b].el.style.backgroundColor = "green";
-    // }
-
-
-    // for (let b = 0; b < terz.length; b++) {
     
-    //     terz[b].el.style.backgroundColor = "blue";
-    //     terz[b].textContent.toUpperCase();
-    // }
-
-
-    // for (let d = 0; d < quarz.length; d++) {
-    //     quarz[d].textContent.toUpperCase();
-    // }
     
-    // for (let e = 0; e < cinquo.length; e++) {
-    //     cinquo[e].textContent.toUpperCase();
-    // }
+    
+    
+    
 
     
+
     
 }
 
