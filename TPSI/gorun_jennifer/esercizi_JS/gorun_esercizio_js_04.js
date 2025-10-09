@@ -18,8 +18,9 @@ function modifica_stile(){
         titolih2[i].style.color = "blue";
         titolih2[i].style.backgroundColor = "yellow";
         titolih2[i].style.fontSize = '40px';
+        titolih2[i].innerText = titolih2[i].innerText.toUpperCase();
     }
-    
+
     par1.style.color="red";
     par4.style.color="red";
     par2.style.backgroundColor="lightgreen";
