@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+    .Grassetto{
+    font-weight: bold;
+        }
+
+    .Bordo{
+        border: 2px solid #000;
+    }
+</style>
+<body>
+    <h1>Inserisci Studente</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome"><br><br>
+    <label for="media">Media Voti:</label>-2
+    <input type="number" id="media" step="0.01"><br><br>
+    <button onclick="aggiungiStudente()">Aggiungi Studente</button>
+    <button onclick="coloraRigheRosso()">Colora Righe</button>
+    <button onclick="Grassetto()">Grassetto</button>
+    <button onclick="coloraRigheBlu()">Blue</button>
+    <button onclick="coloraRighe()">Bordo</button>
+    <table id="tabellaStudenti" border="0">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Media Voti</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="savio_esercizio_js_06.js"></script>
+</body>
+</html>
