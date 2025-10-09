@@ -1,0 +1,16 @@
+.main-title {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    border-spacing: 0px 15px;
+    text-align: center;
+}
+
+th {
+    font-size: 20px;
+}
