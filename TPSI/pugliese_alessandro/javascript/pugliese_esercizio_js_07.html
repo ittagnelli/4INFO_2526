@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rubrica JS — DEMOLISCI TUTTI</title>
+
+    <link rel="stylesheet" href="pugliese_esercizio_js_07.css">
+    <script defer src="pugliese_esercizio_js_07.js"></script>
+</head>
+<body>
+    <canvas id="matrixCanvas"></canvas>
+
+    <header class="topbar">
+        <h1 class="main-title">RUBRICA <span>JS</span></h1>
+        <div class="controls">
+            <label class="switch">
+                <input id="themeToggle" type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="panel">
+            <div class="tools">
+                <input id="globalSearch" placeholder="Search fuzzy: cognome / telefono / nome ..." />
+                <button id="btnExport" class="btn">Export CSV</button>
+                <input id="fileImport" type="file" accept=".csv" style="display:none" />
+                <button id="btnImport" class="btn">Import CSV</button>
+                <button id="btnUndo" class="btn" title="Undo last delete">Undo</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th data-key="cognome" class="sortable">Cognome ▲▼</th>
+                        <th data-key="nome" class="sortable">Nome ▲▼</th>
+                        <th data-key="indirizzo" class="sortable">Indirizzo ▲▼</th>
+                        <th data-key="telefono" class="sortable">Telefono ▲▼</th>
+                        <th>Copy</th>
+                        <th>Rimuovi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="inputx">
+                        <td><input id="cognome" type="text" size=15 placeholder="Es: Rossi"></td>
+                        <td><input id="nome" type="text" size=15 placeholder="Es: Mario"></td>
+                        <td><input id="indirizzo" type="text" size=30 placeholder="Es: Via X 10"></td>
+                        <td><input id="telefono" type="text" size=10 placeholder="Es: 333000111"></td>
+                        <td><button id="btnCerca" class="btn">Cerca (Ctrl+F)</button></td>
+                        <td><button id="btnSalva" class="btn primary">Salva (Ctrl+S)</button></td>
+                    </tr>
+                </tbody>
+
+                <tbody id="contactsBody"></tbody>
+            </table>
+
+            <div class="footer-actions">
+                <button id="btnClearAll" class="btn danger">Pulisci rubrica</button>
+                <div class="small">Shortcuts: <b>Ctrl+S</b> salva - <b>Ctrl+F</b> cerca - <b>Del</b> rimuovi selezione</div>
+            </div>
+        </section>
+    </main>
+
+    <div id="toast" class="toast"></div>
+    <audio id="ding" src=""></audio>
+
+    <footer class="credit">Rubrica DEMOLISCI • Hacker lvl 100k 😎</footer>
+</body>
+</html>
