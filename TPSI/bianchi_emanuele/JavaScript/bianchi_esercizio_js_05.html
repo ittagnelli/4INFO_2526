@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it"><!-- Pagina HTML -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Qui vanno inserite informazioni relative alla pagina ma che non saranno visualizzate -->
+    <!-- sezione meta Fornisce informazioni al web browser e ai motori di ricerca per il processo di indicizzazione -->
+    <meta name="author" content="Antonio Mancuso">
+    <meta name="description" content="Empty Page">
+    <meta name="keywords" content="js">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bianchi_esercizio_js_05.js"></script>
+    <title>esercitazione 05</title>
+    <style>
+        .lineaRossa
+         {
+            background-color:red
+        }
+        .lineaBlue
+        {
+            background-color: blue
+        }
+    </style>
+</head>
+
+<body>
+    <h1>NOME & MEDIA DI OGNI STUDENTE</h1>
+    <form>
+        <input id="studente" name="studente" type="text" placeholder="alunno"/>
+        <input id="media" name="media" type="number" placeholder="voti"/>
+        <button type="button" onclick="add_studente()"value>aggiungi</button>
+        <button type="button" onclick="add_color()"value>colora</button>
+        <ul id="lista_studenti"></ul>
+    </form>
+
+    <br>
+
+    <table border="1" id="tabella"></table>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+        <link rel="stylesheet" href="./bianchi_esercizio:js_07.css">
+        <script src="./bianchi_esercizio_js_07.js"></script>
+        <title>Rubrica JS</title>
+    </head>
+    <body>
+            <table>
+            <table id="tabella">
+                <tr>
+                    <th>Cognome</th>
+                    <th>Nome</th>
+                    <h1 class="main-title">Rubrica JS</h1>
+                    <td><input id="indirizzo" type="text" size=30/></td>
+                    <td><input id="telefono" type="text" size=10/></td>
+                    <td>
+                        <button id="cerca">Cerca</button>
+                        <button onclick="cerca()">Cerca</button>
+                    </td>
+                    <td>
+                        <button id="salva">Salva</button>
+                    </td>
+                    <td>
+                        <button id="aggiorna">Aggiorna</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Marconi</td>
+                    <td>Guglielmo</td>
+                    <td>Via Spalato 33</td>
+                    <td>3332545434</td>
+                    <td colspan="2">
+                        <button>Rimuovi</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Linus</td>
+                    <td>Torvalds</td>
+                    <td>strada Kernel 6</td>
+                    <td>432323432</td>
+                    <td colspan="2">
+                        <button>Rimuovi</button>
+                        <button onclick="salva()">Salva</button>
+                    </td>
+                </tr>
+            </table>        
+    </body>
+</html>
