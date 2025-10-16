@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Studenti e Medie</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #ddd;
+    }
+
+    /* CLASSI CSS */
+    .bold {
+      font-weight: bold;
+    }
+
+    .blu {
+      color: blue;
+    }
+
+    .bordo {
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Gestione Studenti</h2>
+
+  <button onclick="aggiungiRiga()">Aggiungi studente</button>
+  <button onclick="coloraRighe()">Colora righe</button>
+  <button onclick="toggleBold()">Grassetto</button>
+  <button onclick="toggleBlu()">Blue</button>
+  <button onclick="toggleBordo()">Bordo</button>
+
+  <table id="tabellaStudenti">
+    <tr>
+      <th>Nome</th>
+      <th>Media voti</th>
+    </tr>
+  </table>
+
+  <script src="pugliese_esercizio_js_06.js"></script>
+</body>
+</html>

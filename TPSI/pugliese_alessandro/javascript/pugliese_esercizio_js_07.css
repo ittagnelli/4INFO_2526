@@ -1,0 +1,52 @@
+:root{
+    --bg:#050505; --panel:rgba(10,10,10,0.6);
+    --neon:#00ff99; --accent:#00ffaa; --muted:#9aa6b2; --danger:#ff4d6d;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:'Bebas Neue',sans-serif;background:var(--bg);color:var(--neon);}
+
+/* Matrix canvas */
+#matrixCanvas{position:fixed;top:0;left:0;right:0;bottom:0;z-index:0;}
+
+/* Topbar */
+.topbar{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:18px 6%}
+.main-title{color:var(--neon);font-size:44px;letter-spacing:2px;text-shadow:0 0 18px rgba(0,255,153,0.25)}
+.main-title span{color:var(--accent)}
+
+/* Container */
+.container{position:relative;z-index:3;padding:10px 6% 60px}
+.panel{background:var(--panel);border-radius:12px;padding:18px;box-shadow:0 12px 40px rgba(0,0,0,0.8);backdrop-filter:blur(4px)}
+
+/* Tools */
+.tools{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.tools input#globalSearch{flex:1;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(0,255,153,0.08);color:var(--neon)}
+
+/* Table */
+table{width:100%;border-collapse:collapse;color:#eafaf1}
+th{font-size:14px;padding:8px 6px;color:var(--accent);text-align:center}
+td{padding:10px;font-size:15px;text-align:center}
+
+/* Inputs row */
+.inputx input{background:transparent;border:1px solid rgba(0,255,153,0.08);color:var(--neon);padding:8px;border-radius:6px;outline:none;width:100%}
+.inputx input:focus{box-shadow:0 0 8px rgba(0,255,153,0.06);border-color:var(--neon)}
+
+/* Buttons */
+.btn{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.04);padding:8px 10px;border-radius:8px;cursor:pointer;color:var(--neon);font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--neon),var(--accent));color:#001}
+.btn.danger{background:linear-gradient(90deg,var(--danger),#ff7a88);color:#111}
+
+/* Contact row */
+.contact-row{background:linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.06));border-radius:8px;transition:transform .15s,box-shadow .15s}
+.contact-row:hover{transform:translateY(-6px);box-shadow:0 8px 30px rgba(0,255,153,0.06)}
+.contact-row.selected{outline:2px solid rgba(0,255,153,0.18);box-shadow:0 0 25px rgba(0,255,153,0.08)}
+
+/* Toast */
+.toast{position:fixed;right:28px;bottom:28px;z-index:6;background:rgba(0,0,0,0.75);color:var(--neon);padding:12px 18px;border-radius:12px;box-shadow:0 8px 30px rgba(0,255,153,0.08);transform:translateY(20px);opacity:0;transition:all .25s}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* responsive */
+@media(max-width:800px){
+    .main-title{font-size:30px}
+    table{font-size:13px}
+    .tools{flex-direction:column;align-items:stretch}
+}
