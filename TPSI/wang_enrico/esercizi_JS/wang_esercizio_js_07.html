@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="attanasio_esericzio_js_07.css">
+        <title>Rubrica JS</title>
+        <script src="wang_esercizio_js_07.js"></script>
+    </head>
+    <body>
+        <h1 class="main-title">Rubrica JS</h1>
+            <table id="tavella">
+                <tr>
+                    <th>Cognome</th>
+                    <th>Nome</th>
+                    <th>Indirizzo</th>
+                    <th>Telefono</th>
+                    <th colspan=2>Azioni</th>
+                </tr>
+                <tr class="inputx">
+                    <td><input id="tdsurname" type="text" size=15/></td>
+                    <td><input id="tdname" type="text" size=15/></td>
+                    <td><input id="tdaddress" type="text" size=30/></td>
+                    <td><input id="tdphone" type="text" size=10/></td>
+                    <td>
+                        <button onclick="cerca()">Cerca</button>
+                    </td>
+                    <td>
+                        <button onclick="salva()">Salva</button>
+                    </td>
+                    <td>
+                        <button id="agg">aggiorna</button>
+                    </td>
+                </tr>
+            </table>        
+    </body>
+</html>
