@@ -1,5 +1,5 @@
-let isInsert = true // Se è true, sto immettendo dati nuovi; se è false, sto modificando dati esistenti. Variabile globale di stato
-let idFoundLine = 0 // Id della linea da modificare dopo la ricerca
+let isInsert = true 
+let idFoundLine = 0 
 
 
 function salva(){
@@ -15,7 +15,7 @@ function salva(){
 
     if(cognomeValue != "" && nomeValue != "" && indirizzoValue != "" && telefonoValue != ""){
         if(isInsert == true){
-            let id = new Date().getTime() // Assegno un id univoco (unix epoch) a ogni pulsante rimuovi uguale a quello di ogni riga
+            let id = new Date().getTime()
 
             const tr = document.createElement("tr")
             const tdCognome = document.createElement("td")
@@ -51,20 +51,17 @@ function salva(){
             telefonoObj.value = ""    
         }
         else{
-            // Funzione di aggiornamento della linea
             let linea = document.getElementById(idFoundLine)
             linea.children[0].innerText = cognomeValue
             linea.children[1].innerText = nomeValue
             linea.children[2].innerText = indirizzoValue
             linea.children[3].innerText = telefonoValue
 
-            // Ripulisco i campi
             cognomeObj.value = ""
             nomeObj.value = ""
             indirizzoObj.value = ""
             telefonoObj.value = ""    
 
-            // Permetto nuovamente di creare nuove linee resettando la variabile globale di stato
             isInsert = true
         }
     }
@@ -73,7 +70,7 @@ function salva(){
     }
 }
 
-function rimuovi(el){ // el è l'oggetto su cui viene chiamata la funzione (in questo caso il pulsante)
+function rimuovi(el){
     const idPulsante = el.srcElement.id
     let trRemove = document.getElementById(idPulsante)
     trRemove.remove()
@@ -87,7 +84,7 @@ function cerca(){
     const linee = tabella.getElementsByTagName("tr")
 
     for (let i = 2; i < linee.length; i++){
-        const tdCognome = linee[i].children[0].innerText // Prendo il primo contenuto (il cognome) di ogni linea
+        const tdCognome = linee[i].children[0].innerText 
         const tdTelefono = linee[i].children[3].innerText
 
         if(tdCognome == cognomeForm || tdTelefono == telefonoForm){
@@ -96,12 +93,11 @@ function cerca(){
             let indirizzoObj = document.getElementById("indirizzo")
             let telefonoObj = document.getElementById("telefono")
             
-            // riporto i valori trovati all'interno del form
             cognomeObj.value = linee[i].children[0].innerText
             nomeObj.value = linee[i].children[1].innerText
             indirizzoObj.value = linee[i].children[2].innerText
             telefonoObj.value = linee[i].children[3].innerText
-            isInsert = false // Cambio il valore della variabile di stato
+            isInsert = false
             idFoundLine = linee[i].id
             return
         }
