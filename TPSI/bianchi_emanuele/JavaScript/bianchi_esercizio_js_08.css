@@ -1,0 +1,95 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.titolo {
+  text-align: center;
+  font-size: 50px;
+  color: #333;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.input-container input,
+.input-container select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#aggiungiBtn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.lista-attivita {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.lista-attivita li {
+  background-color: white;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.lista-attivita li.completata span.descrizione {
+  text-decoration: line-through;
+  color: #888;
+}
+
+span.descrizione {
+  flex-grow: 1;
+}
+
+span.priorita {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.priorita.alta {
+  color: #d32f2f;
+}
+.priorita.media {
+  color: #f57c00;
+}
+.priorita.bassa {
+  color: #388e3c;
+}
+
+.azione {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.azione.done {
+  color: #555;
+}
+.azione.delete {
+  color: #c62828;
+}
