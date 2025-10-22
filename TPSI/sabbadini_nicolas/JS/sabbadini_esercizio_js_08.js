@@ -1,56 +1,50 @@
-function aggiungi() {
-    let field = document.getElementById("field");
-    let select = document.getElementById("priority");
-    let gridTask = document.getElementById("grid-task");
-    let taskName = document.createElement("div");
-    let priority = document.createElement("span");
-    let completed = document.createElement("span");
-    let remove = document.createElement("span");
-
-    if(field.value.trim() == "") {
-        alert("Compilare tutti i campi");
-        return 0;
+function add() {
+  let todo_add = document.getElementById("TODO").value;
+  let priority = document.getElementById("priority").value;
+  let todo_list = document.querySelector(".todo-list");
+  if (todo_add) {
+    let priorityClass;
+    let priorityIcon;
+    if (priority === "Alta") {
+      priorityClass = "up";
+      priorityIcon = "arrow_upward";
+    } else if (priority === "Media") {
+      priorityClass = "mid";
+      priorityIcon = "arrow_forward";
+    } else {
+      priorityClass = "down";
+      priorityIcon = "arrow_downward";
     }
+    let li = document.createElement("li");
 
-    taskName.classList.add("task");
-    priority.classList.add("material-symbols-outlined");
-    completed.classList.add("material-symbols-outlined");
-    remove.classList.add("material-symbols-outlined");
+    let spanText = document.createElement("span");
+    spanText.innerText = todo_add;
+    li.append(spanText);
 
-    taskName.innerText = field.value;
-    taskName.classList.add("taskName");
+    let spanPriority = document.createElement("span");
+    spanPriority.className = "priority material-icons " + priorityClass;
+    spanPriority.innerText = priorityIcon;
+    li.append(spanPriority);
 
-    if(select.value == "bassa") {
-        priority.innerText = "south";
-        priority.classList.add("green");
-    }
-    else if(select.value == "media") {
-        priority.innerText = "east";
-        priority.classList.add("yellow");
-    }
-    else {
-        priority.innerText = "north";
-        priority.classList.add("red");
-    }
+    let btnDone = document.createElement("button");
+    btnDone.className = "done material-icons";
+    btnDone.innerText = "done_outline";
+    btnDone.onclick = function() {
+      li.classList.toggle("completed");
+    };
+    li.append(btnDone);
 
-    completed.innerText = "done_outline";
-    completed.classList.add("gray");
-    remove.innerText = "delete";
-    remove.classList.add("gray");
+    let btnTrash = document.createElement("button");
+    btnTrash.className = "trash material-icons";
+    btnTrash.innerText = "delete_outline";
+    btnTrash.onclick = function() {
+      li.remove();
+    };
+    li.append(btnTrash);
 
-    gridTask.append(taskName, priority, completed, remove);
-
-    field.value = "";
-    select.value = "bassa";
-
-    completed.addEventListener("click", function() {
-        taskName.classList.toggle("completed");
-    });
-
-    remove.addEventListener("click", function() {
-        taskName.remove();
-        priority.remove();
-        completed.remove();
-        remove.remove();
-    });
+    todo_list.append(li);
+    document.getElementById("TODO").value = "";
+  } else {
+    alert("Inserisci un todo!");
+  }
 }
