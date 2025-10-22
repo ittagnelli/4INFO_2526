@@ -16,7 +16,7 @@
 .todo-input input {
   padding: 5px 10px;
   font-size: 1rem;
-  width: 300px;
+  width: 500px;
 }
 
 .todo-input select {
@@ -48,12 +48,14 @@ hr {
 }
 
 .todo-list li {
-  display: flex;
+  display: grid;
+  grid-template-columns: 500px 40px 40px 40px;
   align-items: center;
   justify-content: center;
   gap: 15px;
   font-size: 1.6rem;
   margin: 10px 0;
+  text-align: center;
 }
 
 .todo-list li.completed span:first-child {
@@ -88,10 +90,6 @@ hr {
 .done {
   color: gray;
   font-size: 1.5rem;
-}
-
-done.completed{
-    text-decoration: line-through;
 }
 
 .trash {
