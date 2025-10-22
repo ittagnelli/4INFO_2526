@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="pugliese_esercizio_js_08.css">
+    <script src="pugliese_esercizio_js_08.js" defer></script>
+    <title>Rubrica JS 2.0</title>
+</head>
+<body>
+    <h1 class="titolo">Rubrica in JS</h1>
+
+    <table>
+        <tr class="input-row">
+            <td><input id="testo" type="text" placeholder="Aggiungi voce..." size="50"></td>
+            <td>
+                <select id="livello">
+                    <option value="bassa">Bassa</option>
+                    <option value="media">Media</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </td>
+            <td>
+                <button id="addBtn">
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <table id="lista"></table>
+</body>
+</html>

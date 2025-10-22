@@ -1,0 +1,19 @@
+.titolo {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 58px;
+}
+
+table {
+    margin: 25px auto;
+    border-spacing: 0 12px;
+    text-align: center;
+}
+
+.input-row td {
+    padding: 6px;
+}
+
+button {
+    cursor: pointer;
+}
