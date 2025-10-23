@@ -4,6 +4,19 @@
     font-size: 60px;
 }
 
+.eliminato {
+    text-decoration: line-through;
+}
+
+.icon {
+    width: 4vh;
+    height: 4vh;
+}
+
+.entryElenco {
+    font-size: 1.35em;
+}
+
 table {
     margin: auto;
     width: 40%;
@@ -18,17 +31,4 @@ th {
 hr {
     border-radius: 0.3vh;
     border: 0.3vh solid #363636;
-}
-
-.eliminato {
-    text-decoration: line-through;
-}
-
-.icon {
-    width: 4vh;
-    height: 4vh;
-}
-
-.entryElenco {
-    font-size: 1.35em;
 }
