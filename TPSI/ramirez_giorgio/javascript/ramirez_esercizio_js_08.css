@@ -1,0 +1,34 @@
+.main-title {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    border-spacing: 0px 15px;
+    text-align: center;
+}
+
+th {
+    font-size: 20px;
+}
+
+hr {
+    border-radius: 0.3vh;
+    border: 0.3vh solid #363636;
+}
+
+.eliminato {
+    text-decoration: line-through;
+}
+
+.icon {
+    width: 4vh;
+    height: 4vh;
+}
+
+.entryElenco {
+    font-size: 1.35em;
+}
