@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: white;
+}
+
+.main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    margin: 20px 0;
+}
+
+.todo-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#attivita {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+#priority {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#add-btn {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: green;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#table {
+    width: 60%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#table tr {
+    border-bottom: 1px solid #ccc;
+}
+
+#table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+td i {
+    margin-right: 10px;
+}
+
+i {
+    font-size: 20px; 
+}
+
+.sbarrato{
+    text-decoration: line-through;
+    color: grey;
+}
+
+.blu{
+    color: blue;
+}
