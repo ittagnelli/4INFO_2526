@@ -1,26 +1,7 @@
-document.addEventListener("DOMContentLoaded", init)
-
-function init(){
-    let buttonCerca = document.getElementById("cerca")
-    let buttonSalva = document.getElementById("salva")
-    let buttonAggiorna = document.getElementById("aggiorna")
-    buttonCerca.addEventListener("click", cercaHandler)
-    buttonSalva.addEventListener("click", salvaHandler)
-    buttonAggiorna.addEventListener("click", aggiornaHandler)
-}
 let isInsert = true // Se è true, sto immettendo dati nuovi; se è false, sto modificando dati esistenti. Variabile globale di stato
 let idFoundLine = 0 // Id della linea da modificare dopo la ricerca
 
-function cercaHandler(){
-    console.log("Cerca handler")
-    console.log(getValue("cognome"))
-    console.log(getValue("nome"))
-    console.log(getValue("indirizzo"))
-    console.log(getValue("telefono"))
-}
 
-function salvaHandler(){
-    console.log("Salva handler")
 function salva(){
     let cognomeObj = document.getElementById("cognome")
     let cognomeValue = cognomeObj.value
@@ -43,19 +24,19 @@ function salva(){
             const tdTelefono = document.createElement("td")
             const tdRimuovi = document.createElement("td")
             const buttonRimuovi = document.createElement("button")
-
+    
             buttonRimuovi.innerText = "Rimuovi"
             buttonRimuovi.addEventListener("click", rimuovi)
-
+            
             buttonRimuovi.id = id
             tr.id = id
-
+    
             tdCognome.innerText = cognomeValue
             tdNome.innerText = nomeValue
             tdIndirizzo.innerText = indirizzoValue
             tdTelefono.innerText = telefonoValue
             tdRimuovi.colSpan = 2
-
+    
             tdRimuovi.append(buttonRimuovi)
             tr.append(tdCognome)
             tr.append(tdNome)
@@ -63,7 +44,7 @@ function salva(){
             tr.append(tdTelefono)
             tr.append(tdRimuovi)
             tabellaObj.append(tr)
-
+            
             cognomeObj.value = ""
             nomeObj.value = ""
             indirizzoObj.value = ""
@@ -92,16 +73,12 @@ function salva(){
     }
 }
 
-function aggiornaHandler(){
-    console.log("Aggiorna handler")
 function rimuovi(el){ // el è l'oggetto su cui viene chiamata la funzione (in questo caso il pulsante)
     const idPulsante = el.srcElement.id
     let trRemove = document.getElementById(idPulsante)
     trRemove.remove()
 }
 
-function getValue(id){
-    return document.getElementById(id).value
 function cerca(){
     let cognomeForm = document.getElementById("cognome").value
     let telefonoForm = document.getElementById("telefono").value
@@ -118,7 +95,7 @@ function cerca(){
             let nomeObj = document.getElementById("nome")
             let indirizzoObj = document.getElementById("indirizzo")
             let telefonoObj = document.getElementById("telefono")
-
+            
             // riporto i valori trovati all'interno del form
             cognomeObj.value = linee[i].children[0].innerText
             nomeObj.value = linee[i].children[1].innerText
@@ -131,4 +108,3 @@ function cerca(){
     }
     alert("Utente non presente")
 }
-
