@@ -85,5 +85,5 @@ function fatto(el){
     // Seleziono e prendo la linea della cella da barrare, alla cella aggiungo una classe che barra il testo
     const idPulsante = el.srcElement.classList[0]
     let trToTick = document.getElementsByClassName(idPulsante)
-    trToTick[0].children[0].classList.add("eliminato")
+    trToTick[0].children[0].classList.toggle("eliminato")
 }
