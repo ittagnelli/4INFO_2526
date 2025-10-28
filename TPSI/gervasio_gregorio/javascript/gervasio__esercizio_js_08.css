@@ -1,0 +1,98 @@
+#title{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+#addelem{
+    position: absolute;
+    top: 40%;
+    right: 25%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#add{
+    width: 40px;
+    height: 40px;
+}
+
+#label{
+    position: absolute;
+    top: 42%;
+    right: 30%;
+}
+
+#text{
+    position: absolute;
+    top: 42%;
+    left: 20%;
+}
+
+#elem1{
+    position: absolute;
+    top: 50%;
+}
+
+#elem2{
+    position: absolute;
+    top: 55%;
+}
+
+#elem3{
+    position: absolute;
+    top: 60%;
+}
+
+#elem4{
+    position: absolute;
+    top: 65%;
+}
+
+#elem5{
+    position: absolute;
+    top: 70%;
+}
+
+#del1{
+    position: absolute;
+    top: 50%;
+}
+
+#del2{
+    position: absolute;
+    top: 55%;
+}
+
+#del3{
+    position: absolute;
+    top: 60%;
+}
+
+#del4{
+    position: absolute;
+    top: 65%;
+}
+
+#del5{
+    position: absolute;
+    top: 70%;
+}
+
+.parte_text{
+    position: absolute;
+    left: 20%;
+}
+
+.stato{
+    position: absolute;
+    right: 40%;
+}
+
+.bottone{
+    position: absolute;
+    right: 20%;
+}
