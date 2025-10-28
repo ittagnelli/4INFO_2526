@@ -1,0 +1,22 @@
+.titolo{
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+.done{
+    text-decoration: line-through;
+}
+
+.Bassa{
+    color: green;
+}
+.Media{
+    color: yellow;
+}
+.Alta{
+    color: red;
+}
