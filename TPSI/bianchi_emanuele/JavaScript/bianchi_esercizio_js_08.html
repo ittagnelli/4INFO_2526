@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Mia Lista di Cose da Fare</title>
+  <link rel="stylesheet" href="./bianchi_esercizio_js_08.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+</head>
+<body>
+      <script src="./bianchi_esercizio_js_08.js"></script>
+  <main>
+    <h1 class="titolo">La Mia Lista</h1>
+    <section class="input-container">
+      <input type="text" id="inputAttivita" placeholder="Scrivi un'attività..." />
+      <select id="selezionaPriorita">
+        <option value="Bassa">Bassa</option>
+        <option value="Media">Media</option>
+        <option value="Alta">Alta</option>
+      </select>
+      <button id="aggiungiBtn" class="material-icons">add</button>
+    </section>
+
+    <ul id="listaAttivita" class="lista-attivita"></ul>
+  </main>
+</body>
+</html>
