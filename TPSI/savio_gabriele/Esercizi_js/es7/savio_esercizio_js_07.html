@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <link rel="stylesheet" href="./savio_esercizio_js_07.css">
+  </head>
+  <body>
+    <h1 class="main-title">Rubrica JS</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Cognome</th>
+          <th>Nome</th>
+          <th>Indirizzo</th>
+          <th>Telefono</th>
+          <th colspan="2">Azioni</th>
+        </tr>
+        <tr class="inputx">
+          <td><input type="text" id="cognome" size="15" /></td>
+          <td><input type="text" id="nome" size="15" /></td>
+          <td><input type="text" id="indirizzo" size="30" /></td>
+          <td><input type="text" id="telefono" size="10" /></td>
+          <td>
+            <button onclick="cerca()">Cerca</button>
+            <button onclick="salva()">Salva</button>
+            <button onclick="modifica()">Aggiorna</button>
+          </td>
+        </tr>
+      </thead>
+      <tbody id="rubricaBody"></tbody>
+    </table>
+    <script src="./savio_esercizio_js_07.js"></script>
+  </body>
+</html>
