@@ -1,0 +1,58 @@
+.main-title {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 60px;
+}
+
+table {
+    margin: auto;
+    width: 40%;
+    border-spacing: 0px 15px;
+    text-align: center;
+}
+
+#contenitore-dati {
+    width: 40%;
+    visibility: hidden; 
+}
+
+
+.nascosto-separatore {
+    display: none;
+}
+
+th {
+    font-size: 20px;
+}
+
+.importo {
+    font-weight: bolder;
+}
+
+.icon {
+    color: blue; 
+    font-size: 2rem;
+}
+
+.icon:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+#riga-input .icon-add:hover { 
+    color: green; 
+}
+
+#riga-input .icon-sum:hover { 
+    color: orange; 
+}
+
+.icon-remove {
+    color: red;
+    font-size: 2rem; 
+}
+
+.icon-remove:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
