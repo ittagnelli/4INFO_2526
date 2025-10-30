@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Paghe JS</title>
+    <link rel="stylesheet" href="bianchi_esercizio_js_paghe.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="bianchi_esercizio_js_paghe.js" defer></script>
+</head>
+<body>
+    <h1 class="main-title">Gestione Paghe JS</h1>
+
+    <table id="paghe">
+        <tr>
+            <th>Dipartimento</th>
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Mese</th>
+            <th>Importo</th>
+            <th colspan="2">Azioni</th>
+        </tr>
+        <tr>
+            <td>
+                <input list="dipartimenti" id="dipartimento">
+                <datalist id="dipartimenti">
+                    <option value="Marketing">
+                    <option value="Finanza">
+                    <option value="Legale">
+                    <option value="Engineering">
+                    <option value="Produzione">
+                </datalist>
+            </td>
+            <td><input id="cognome" type="text" size="15"></td>
+            <td><input id="nome" type="text" size="15"></td>
+            <td><input type="month" id="mese" min="2024-01"></td>
+            <td><input id="importo" type="number" min="500"></td>
+            <td><span id="add" class="material-icons icon">add</span></td>
+            <td><span id="total" class="material-icons icon">functions</span></td>
+            <td><span id="avg" class="material-icons icon">trending_up</span></td>
+        </tr>
+    </table>
+</body>
+</html>

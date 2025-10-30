@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f7fa;
+}
+
+h1 {
+    color: #003366;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #e8f0fe;
+}
+
+.icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #007BFF;
+}
+
+.icon:hover {
+    color: #0056b3;
+}
+
+.importo {
+    font-weight: bold;
+    color: #333;
+}
+
+hr {
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Shopping Cart - Bianchi</title>
+<link rel="stylesheet" href="bianchi_esercizio_js_carrello.css" />
+</head>
+<body>
+  <h1>Carrello Semplice</h1>
+
+  <label>Prodotto:</label>
+  <input type="text" id="product" />
+  
+  <label>Quantità:</label>
+  <input type="number" id="quantity" min="1" value="1" />
+
+  <label>Costo unitario (€):</label>
+  <input type="number" id="price" min="0" step="0.01" value="0" />
+
+  <button id="add">Aggiungi</button>
+
+  <table border="1" id="cart">
+    <thead>
+      <tr>
+        <th>Prodotto</th>
+        <th>Quantità</th>
+        <th>Prezzo unitario (€)</th>
+        <th>Prezzo totale (€)</th>
+        <th>Rimuovi</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <button id="total">Calcola totale carrello</button>
+  <p id="totalValue">Totale carrello: €0.00</p>
+
+  <script src="bianchi_esercizio_js_carrello.js"></script>
+</body>
+</html>
