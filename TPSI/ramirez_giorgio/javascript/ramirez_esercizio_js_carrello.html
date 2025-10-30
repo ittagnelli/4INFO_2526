@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrello JS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="ramirez_esercizio_js_carrello.css">
+    <script src="ramirez_esercizio_js_carrello.js" ></script>
+</head>
+<body>
+    <h1 class="main-title">Carrello JS</h1>
+    <table id="carrello">
+        <tr>
+            <th>Prodotto</th>
+            <th>Quantità</th>
+            <th>Costo Unitario</th>
+            <th colspan="2">Azioni</th>
+        </tr>
+        <tr id="riga-input">
+            <td><input id="prodotto" type="text" size="30" /></td>
+            <td><input id="qty" type="number" min="1" value="1" /></td>
+            <td><input id="costo" type="number" min="0.01" step="0.01" value="0.01" /></td>
+            <td>
+                <span class="material-icons icon icon-add" onclick="aggiungiProdotto()">add</span>
+            </td>
+            <td>
+                <span class="material-icons icon icon-sum" onclick="aggiornaTotale()">functions</span>
+            </td>
+        </tr>    
+    </table>
+    <table id="contenitore-dati">
+        <tr id="riga-separatore" class="nascosto-separatore"> 
+            <td colspan="5"><hr></td>
+        </tr>
+        <tr id="riga-totale">
+            <td colspan="3">TOTALE</td>
+            <td id="totale-complessivo" class="importo"></td>
+        </tr>
+    </table>
+</body>
+</html>
