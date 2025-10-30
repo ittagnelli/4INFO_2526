@@ -1,0 +1,98 @@
+.main-title {
+  text-align: center;
+  font-family: "Bebas Neue";
+  font-size: 60px;
+}
+
+.todo-input {
+  margin: 40px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+}
+
+.todo-input input {
+  padding: 5px 10px;
+  font-size: 1rem;
+  width: 500px;
+}
+
+.todo-input select {
+  padding: 4px 8px;
+  font-size: 1rem;
+}
+
+.todo-input .add {
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+  color: green;
+  cursor: pointer;
+}
+
+hr {
+  margin: 30px auto;
+  width: 90%;
+  border: 3px solid #999;
+  border-radius: 2px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content;
+  text-align: left;
+}
+
+.todo-list li {
+  display: grid;
+  grid-template-columns: 500px 40px 40px 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-size: 1.6rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.todo-list li.completed span:first-child {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.priority {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.priority.up {
+  color: red;
+}
+
+.priority.mid {
+  color: orange;
+}
+
+.priority.down {
+  color: green;
+}
+
+.trash,
+.done {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.done {
+  color: gray;
+  font-size: 1.5rem;
+}
+
+.trash {
+  color: gray;
+  font-size: 1.5rem;
+}

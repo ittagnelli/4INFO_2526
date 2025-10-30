@@ -1,0 +1,35 @@
+.main-title {
+    text-align: center;
+    font-family: 'Bebas Neue';
+    font-size: 8rem;
+}
+
+.separatore { 
+    border: none;
+    border-top: 1vh solid gray;
+    margin: 0 25vw;
+    border-radius: 2vw;
+}
+
+table {
+    border: 1px;
+    align-items: left;
+    margin: auto;
+    width: 40%;
+    border-spacing: 0px 15px;
+    text-align: center;
+}
+
+#tabella{
+    font-size: 2rem;
+    max-width: 90%;
+}
+
+td {
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+th {
+    font-size: 20px;
+}

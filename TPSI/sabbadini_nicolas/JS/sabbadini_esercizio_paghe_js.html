@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="sabbadini_esercizio_paghe_js.css">
+    <script src="sabbadini_esercizio_paghe_js.js"></script>
+    <title>Gestione Paghe JS</title>
+</head>
+
+<body>
+    <h1 class="main-title">Gestione Paghe JS</h1>
+    <table id="paghe">
+        <tbody id="tabella">
+            <tr>
+                <th>Dipartimento</th>
+                <th>Cognome</th>
+                <th>Nome</th>
+                <th>Mese</th>
+                <th>Importo</th>
+                <th colspan="2">Azioni</th>
+            </tr>
+            <tr id="ultimo_elemento">
+                <td>
+                    <input list="dipartimenti" id="dipartimento">
+                    <datalist id="dipartimenti">
+                        <option value="Marketing">
+                        </option>
+                        <option value="Finanza">
+                        </option>
+                        <option value="Legale">
+                        </option>
+                        <option value="Engineering">
+                        </option>
+                        <option value="Produzione">
+                        </option>
+                    </datalist>
+                </td>
+                <td><input id="cognome" type="text" size="15"></td>
+                <td><input id="nome" type="text" size="15"></td>
+                <td><input type="month" id="mese" name="mese" min="2024-01"></td>
+                <td><input id="importo" type="number" min="500"></td>
+                <td>
+                    <span class="material-icons icon" onclick="aggiungi()">add</span>
+                </td>
+                <td>
+                    <span class="material-icons icon" onclick="sommatoria()">
+                        functions
+                    </span>
+                </td>
+                <td>
+                    <span class="material-icons icon" onclick="media()">
+                        trending_up
+                    </span>
+                </td>
+            </tr>
+             <tr>
+                <td colspan="5">
+                    <hr>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

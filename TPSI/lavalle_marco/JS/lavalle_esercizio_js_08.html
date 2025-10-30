@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+    <html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="lavalle_esercizio_js_08.css">
+        <script src="lavalle_esercizio_js_08.js"></script>
+
+        <title>Rubrica JS</title>
+    </head>
+    <body>
+        <h1 class="main-title">To Do List</h1>
+            <table>
+                <tr class="input">
+                    <td colspan="2">
+                        <input id="todo" type="text" size="51" maxlength="50"/>
+                    </td>
+                    <td>
+                        <select id="priorità" name="priorità">
+                            <option value="bassa">Bassa</option>
+                            <option value="media">Media</option>
+                            <option value="alta">Alta</option>
+                        </select>
+                    </td>
+                    <td>
+                        <button onclick="salva()">
+                             <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </td>
+                </tr>  
+            </table>
+                <hr class="separatore">
+            <table id="tabella"></table>
+    </body>
+</html>
