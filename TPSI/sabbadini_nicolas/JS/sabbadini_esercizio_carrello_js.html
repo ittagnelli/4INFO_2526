@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="sabbadini_esercizio_carrello_js.css">
+    <script src="sabbadini_esercizio_carrello_js.js"></script>
+    <title>Carrello JS</title>
+</head>
+
+<body>
+    <h1 class="main-title">Carrello JS</h1>
+    <table id="carrello">
+        <tr>
+            <th>Prodotto</th>
+            <th>Quantità</th>
+            <th>Costo</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr id="ultima">
+            <td><input id="prodotto" type="text" size="30" /></td>
+            <td><input id="qty" type="number" min="1" /></td>
+            <td><input id="costo" type="number" min="1" /></td>
+            <td>
+                <span class="material-icons icon" onclick="addProdotto()">add</span>
+            </td>
+            <td>
+                <span class="material-icons icon" onclick="showTot()">functions</span>
+            </td>
+        </tr>
+        <tr class="hidden">
+            <td colspan="4">
+                <hr>
+            </td>
+        </tr>
+        <tr class="hidden">
+            <td colspan="3">TOTALE</td>
+            <td id="import"></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
