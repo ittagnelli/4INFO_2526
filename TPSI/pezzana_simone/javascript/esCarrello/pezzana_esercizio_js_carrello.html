@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="pezzana_esercizio_js_carrello.css">
+    <script src="pezzana_esercizio_js_carrello.js"></script>
+    <title>Carrello JS</title>
+</head>
+
+<body>
+    <h1 class="main-title">Carrello JS</h1>
+    <table id="carrello">
+        <tr>
+            <th>Prodotto</th>
+            <th>Quantità</th>
+            <th>Costo</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input id="prodotto" type="text" size="30" /></td>
+            <td><input id="qty" type="number" min="1" /></td>
+            <td><input id="costo" type="number" min="1" /></td>
+            <td>
+                <span id="add" class="material-icons icon">add</span>
+            </td>
+            <td>
+                <span id="aggiornaTotale" class="material-icons icon">functions</span>
+            </td>
+        </tr>
+        <tr id="TrSep">
+            <td colspan="4">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">TOTALE</td>
+            <td id="totale">0 €</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
