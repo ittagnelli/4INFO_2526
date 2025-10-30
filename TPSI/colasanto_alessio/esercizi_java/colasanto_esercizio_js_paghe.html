@@ -1,0 +1,117 @@
+<html lang="it"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="colasanto_esercizio_js_paghe.css">
+    <script src="colasanto_esercizio_js_paghe.js"></script>
+    <title>Gestione Paghe JS</title>
+</head>
+
+<body>
+    <h1 class="main-title">Gestione Paghe JS</h1>
+    <table id="paghe">
+        <tbody>
+            <tr>
+            <th>Dipartimento</th>
+            <th>Cognome</th>
+            <th>Nome</th>
+            <th>Mese</th>
+            <th>Importo</th>
+            <th colspan="2">Azioni</th>
+        </tr>
+        <tr>
+            <td>
+                <input list="dipartimenti" id="dipartimento">
+                <datalist id="dipartimenti">
+                    <option value="Marketing">
+                    </option><option value="Finanza">
+                    </option><option value="Legale">
+                    </option><option value="Engineering">
+                    </option><option value="Produzione">
+                </option></datalist>
+            </td>
+            <td><input id="cognome" type="text" size="15"></td>
+            <td><input id="nome" type="text" size="15"></td>
+            <td><input type="month" id="mese" name="mese" min="2024-01"></td>
+            <td><input id="importo" type="number" min="500"></td>
+            <td>
+                <span class="material-icons icon" onclick="add()">add</span>
+            </td>
+            <td>
+                <span class="material-icons icon" onclick="totale()">
+                    functions
+                </span>
+            </td>
+            <td>
+                <span class="material-icons icon" onclick="media()">
+                    trending_up
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <hr>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table id="pagheinfo">
+    <tr>
+        <td>Marketing</td>
+        <td>Rossi</td>
+        <td>Mario</td>
+        <td>July 2024</td>
+        <td class="importo">1456</td>
+    </tr>
+    <tr>
+        <td>Finanza</td>
+        <td>Verdi</td>
+        <td>Giulio</td>
+        <td>March 2024</td>
+        <td class="importo">2190</td>
+    </tr>
+    <tr>
+        <td>Engineering</td>
+        <td>Bianchi</td>
+        <td>Walter</td>
+        <td>April 2024</td>
+        <td class="importo">2345</td>
+    </tr>
+</table>
+
+<table>
+    <tbody>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>TOTALE</td>
+            <td class="importo" id="TOTALE">5991</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td>MEDIA</td>
+            <td class="importo" id="MEDIA">1997</td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <hr>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</body></html>
