@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", init, false)
+
+function init(){
+    console.log("DOM caricato.")
+}
+
 let primaPressioneTotale = true
 let primaPressioneMedia = true
 
@@ -55,7 +61,67 @@ function nuovaPaga(){
 }
 
 function mostraTot(){
+    let tabellaObj = document.getElementById("paghe")
     if(primaPressioneTotale == true && tabellaObj.children.length >= 3){
+        let body = document.getElementById("body")
+        let tabellaSomma = document.createElement("table")
+        let rigaLineaSup = document.createElement("tr")
+        let rigaPrezzo = document.createElement("tr")
+        let rigaLineaInf = document.createElement("tr")
+        let tdRigaSup = document.createElement("td")
+        let tdCentrTotale = document.createElement("td")
+        let tdCentrPrezzo = document.createElement("td")
+        let tdRigaInf = document.createElement("td")
+        let hrRigaSup = document.createElement("hr")
+        let hrRigaInf = document.createElement("hr")
+        
+        tdCentrPrezzo.id = "sommaTdValPrezzo"
+
+        tdRigaSup.colSpan = 5
+        tdCentrTotale.colSpan = 4
+        tdRigaInf.colSpan = 5
+        tdCentrPrezzo.classList.add("importo")
+        
+        let somma = 0
+        for (let i = 1; i < tabellaObj.children.length; i++) {
+            somma = somma + Number(tabellaObj.children[i].children[4].innerText)
+        }
+
+        tdCentrTotale.innerHTML = "TOTALE"
+        tdCentrPrezzo.innerHTML = `${somma} €`
+
+        tabellaSomma.append(rigaLineaSup)
+        tabellaSomma.append(rigaPrezzo)
+        tabellaSomma.append(rigaLineaInf)
+        rigaLineaSup.append(tdRigaSup)
+        rigaPrezzo.append(tdCentrTotale)
+        rigaPrezzo.append(tdCentrPrezzo)
+        rigaLineaInf.append(tdRigaInf)
+        tdRigaSup.append(hrRigaSup)
+        tdRigaInf.append(hrRigaInf)
+        body.append(tabellaSomma)
+
+        primaPressioneTotale = false
+    }
+    else if(primaPressioneTotale == false && tabellaObj.children.length >= 3){
+        let tdCentrPrezzo = document.getElementById("sommaTdValPrezzo")
+        
+        let somma = 0
+        for (let i = 1; i < tabellaObj.children.length; i++) {
+            somma = somma + Number(tabellaObj.children[i].children[4].innerText)
+        }
+
+        tdCentrPrezzo.innerHTML = `${somma} €`
+    }
+    else{
+        alert("Per poter usare la funzione somma è necessario avere almeno due entry nelle paghe.")
+    }
+}
+
+function mostraMed(){
+    let tabellaObj = document.getElementById("paghe")
+    if(primaPressioneMedia == true && tabellaObj.children.length >= 3){
+        let body = document.getElementById("body")
         let tabellaMedia = document.createElement("table")
         let rigaLineaSup = document.createElement("tr")
         let rigaPrezzo = document.createElement("tr")
@@ -67,6 +133,8 @@ function mostraTot(){
         let hrRigaSup = document.createElement("hr")
         let hrRigaInf = document.createElement("hr")
         
+        tdCentrPrezzo.id = "mediaTdValPrezzo"
+
         tdRigaSup.colSpan = 5
         tdCentrTotale.colSpan = 4
         tdRigaInf.colSpan = 5
@@ -74,10 +142,38 @@ function mostraTot(){
         
         let somma = 0
         for (let i = 1; i < tabellaObj.children.length; i++) {
-            somma = somma + Number(tabellaObj.children[i].children[4])
+            somma = somma + Number(tabellaObj.children[i].children[4].innerText)
         }
+        let media = somma / (tabellaObj.children.length - 1)
 
-        tdCentrTotale.innerText("TOTALE")
-        tdCentrPrezzo.innerText(somma, " €")
+        tdCentrTotale.innerHTML = "TOTALE"
+        tdCentrPrezzo.innerHTML = `${media} €`
+
+        tabellaMedia.append(rigaLineaSup)
+        tabellaMedia.append(rigaPrezzo)
+        tabellaMedia.append(rigaLineaInf)
+        rigaLineaSup.append(tdRigaSup)
+        rigaPrezzo.append(tdCentrTotale)
+        rigaPrezzo.append(tdCentrPrezzo)
+        rigaLineaInf.append(tdRigaInf)
+        tdRigaSup.append(hrRigaSup)
+        tdRigaInf.append(hrRigaInf)
+        body.append(tabellaMedia)
+
+        primaPressioneMedia = false
+    }
+    else if(primaPressioneMedia == false && tabellaObj.children.length >= 3){
+        let tdCentrPrezzo = document.getElementById("mediaTdValPrezzo")
+        
+        let somma = 0
+        for (let i = 1; i < tabellaObj.children.length; i++) {
+            somma = somma + Number(tabellaObj.children[i].children[4].innerText)
+        }
+        let media = somma / (tabellaObj.children.length - 1)
+
+        tdCentrPrezzo.innerHTML = `${media} €`
+    }
+    else{
+        alert("Per poter usare la funzione media è necessario avere almeno due entry nelle paghe.")
     }
 }

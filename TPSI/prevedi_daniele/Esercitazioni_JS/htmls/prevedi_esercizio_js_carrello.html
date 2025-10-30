@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../styles/prevedi_esercizio_js_carrello.css">
+    <script src="../scripts/prevedi_esercizio_js_carrello.js"></script>
+    <title>Carrello JS</title>
+</head>
+
+<body id="body">
+    <h1 class="main-title">Carrello JS</h1>
+    <table id="carrello">
+        <tr>
+            <th>Prodotto</th>
+            <th>Quantità</th>
+            <th>Costo</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input id="prodotto" type="text" size="30" /></td>
+            <td><input id="qty" type="number" min="1" /></td>
+            <td><input id="costo" type="number" min="1" /></td>
+            <td>
+                <span class="material-icons icon" onclick="aggiungi()">add</span>
+            </td>
+            <td>
+                <span class="material-icons icon" onclick="mostraTotale()">functions</span>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
