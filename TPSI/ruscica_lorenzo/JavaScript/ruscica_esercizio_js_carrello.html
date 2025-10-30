@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="ruscica_js_template.css">
+    <script src="ruscica_esercizio_js_carello.js"></script>
+    <title>Carrello JS</title>
+</head>
+
+<body>
+    <h1 class="main-title">Carrello JS</h1>
+    <table id="carrello">
+        <tr>
+            <th>Prodotto</th>
+            <th>Quantità</th>
+            <th>Costo</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input id="prodoo" type="text" size="30" /></td>
+            <td><input id="qty" type="number" min="1" /></td>
+            <td><input id="costo" type="number" min="1" /></td>
+            <td>
+                <span class="material-icons icon">add</span>
+            </td>
+            <td>
+                <span class="material-icons icon">functions</span>
+            </td>
+        </tr>
+        <tr>
+            <td>USB Stick</td>
+            <td><input id="qty_1" type="number" min="1" value="2" /></td>
+            <td>3.99 &euro;</td>
+            <td class="importo">7.98 &euro;</td>
+            <td><span class="material-icons icon-remove">remove_shopping_cart</span></td>
+        </tr>
+        <tr>
+            <td>SSD 1TB</td>
+            <td><input id="qty_2" type="number" min="1" value="1" /></td>
+            <td>56 &euro;</td>
+            <td class="importo">56 &euro;</td>
+            <td><span class="material-icons icon-remove">remove_shopping_cart</span></td>
+        </tr>
+        <tr>
+            <td>Cavo USB-C</td>
+            <td><input id="qty_3" type="number" min="1" value="5" /></td>
+            <td>1.99 &euro;</td>
+            <td class="importo">9.95 &euro;</td>
+            <td><span class="material-icons icon-remove">remove_shopping_cart</span></td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">TOTALE</td>
+            <td>73.93 &euro;</td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
